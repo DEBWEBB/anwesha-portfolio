@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anwesha Sarkar - Teacher Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <script>
+    // Smooth scroll for nav links
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', function(e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="bg-gradient"></div>
+  <header>
+    <div class="profile-pic animated-pic">
+      <!-- Replace with your photo if available -->
+      <span>AS</span>
+    </div>
+    <h1 class="glow">Anwesha Sarkar</h1>
+    <p class="subtitle">Abacus Trainer & Primary Teacher</p>
+    <div class="header-wave"></div>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about" class="fade-in">
+      <h2>About Me</h2>
+      <p>
+        Motivated and enthusiastic Abacus teacher with over 2 years of teaching experience. 
+        Skilled in both mental arithmetic training and primary education, I am dedicated to helping children 
+        build confidence, improve academic performance, and enjoy the process of learning.
+      </p>
+    </section>
+
+    <section id="experience" class="fade-in">
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Abacus Trainer</strong> – Educus Mind Development House (2024 – 2025)<br>
+          Conducted abacus and mental arithmetic classes for children aged 2–15, designed lesson plans, and guided students for competitions.</li>
+        <li><strong>Private Tutor</strong> – Freelance (2022 – 2024)<br>
+          Taught Mathematics, English, and Environmental Studies to Classes 1–5 with a focus on interactive learning.</li>
+      </ul>
+    </section>
+
+    <section id="skills" class="fade-in">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Abacus & Mental Arithmetic</li>
+        <li>Primary School Teaching</li>
+        <li>Classroom Management</li>
+        <li>Lesson Planning</li>
+        <li>Patience & Adaptability</li>
+        <li>Effective Communication with Parents & Students</li>
+      </ul>
+    </section>
+
+    <section id="education" class="fade-in">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>B.A. LL.B.</strong> (Pursuing) – Jyotirmoy School of Law, University of Calcutta</li>
+        <li><strong>Higher Secondary</strong> – Bethuadahari Girls’ High School (78%, 2021)</li>
+        <li><strong>Madhyamik</strong> – Bethuadahari Girls’ High School (68%, 2019)</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact fade-in">
+      <h2>Contact</h2>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <span>📍</span>
+          <p>Sonarpur, Kolkata – 700150</p>
+        </div>
+        <div class="contact-card">
+          <span>📞</span>
+          <p>7872069418 / 9749648511</p>
+        </div>
+        <div class="contact-card">
+          <span>✉️</span>
+          <p><a href="mailto:sarkaranwesha185@gmail.com">sarkaranwesha185@gmail.com</a></p>
+        </div>
+      </div>
+      <form class="contact-form" autocomplete="off">
+        <h3>Send a Message</h3>
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-row">
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-row">
+          <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit">Send</button>
+        <div class="form-message" style="display:none;"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Anwesha Sarkar | Teacher Portfolio</p>
+  </footer>
+  <script>
+    // Fade-in animation on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px"
+    };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+
+    // Contact form fake submission
+    document.querySelector('.contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const msg = this.querySelector('.form-message');
+      msg.textContent = "Thank you for your message! (Demo only)";
+      msg.style.display = "block";
+      this.reset();
+      setTimeout(() => { msg.style.display = "none"; }, 4000);
+    });
+  </script>
+</body>
+</html>

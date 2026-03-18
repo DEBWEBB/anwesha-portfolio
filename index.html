@@ -5,146 +5,339 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anwesha Sarkar - Teacher Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <script>
-    // Smooth scroll for nav links
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('click', function(e) {
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            e.preventDefault();
-            target.scrollIntoView({ behavior: 'smooth' });
-          }
-        });
-      });
-    });
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="bg-gradient"></div>
-  <header>
-    <div class="profile-pic animated-pic">
-      <!-- Replace with your photo if available -->
-      <span>AS</span>
-    </div>
-    <h1 class="glow">Anwesha Sarkar</h1>
-    <p class="subtitle">Abacus Trainer & Primary Teacher</p>
-    <div class="header-wave"></div>
-  </header>
+  <div class="scroll-progress" id="scroll-progress"></div>
+  <div class="page-shell">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="ambient ambient-three"></div>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <main>
-    <section id="about" class="fade-in">
-      <h2>About Me</h2>
-      <p>
-        Motivated and enthusiastic Abacus teacher with over 2 years of teaching experience. 
-        Skilled in both mental arithmetic training and primary education, I am dedicated to helping children 
-        build confidence, improve academic performance, and enjoy the process of learning.
-      </p>
-    </section>
-
-    <section id="experience" class="fade-in">
-      <h2>Experience</h2>
-      <ul>
-        <li><strong>Abacus Trainer</strong> – Educus Mind Development House (2024 – 2025)<br>
-          Conducted abacus and mental arithmetic classes for children aged 2–15, designed lesson plans, and guided students for competitions.</li>
-        <li><strong>Private Tutor</strong> – Freelance (2022 – 2024)<br>
-          Taught Mathematics, English, and Environmental Studies to Classes 1–5 with a focus on interactive learning.</li>
-      </ul>
-    </section>
-
-    <section id="skills" class="fade-in">
-      <h2>Skills</h2>
-      <ul class="skills-list">
-        <li>Abacus & Mental Arithmetic</li>
-        <li>Primary School Teaching</li>
-        <li>Classroom Management</li>
-        <li>Lesson Planning</li>
-        <li>Patience & Adaptability</li>
-        <li>Effective Communication with Parents & Students</li>
-      </ul>
-    </section>
-
-    <section id="education" class="fade-in">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>B.A. LL.B.</strong> (Pursuing) – Jyotirmoy School of Law, University of Calcutta</li>
-        <li><strong>Higher Secondary</strong> – Bethuadahari Girls’ High School (78%, 2021)</li>
-        <li><strong>Madhyamik</strong> – Bethuadahari Girls’ High School (68%, 2019)</li>
-      </ul>
-    </section>
-
-    <section id="contact" class="contact fade-in">
-      <h2>Contact</h2>
-      <div class="contact-cards">
-        <div class="contact-card">
-          <span>📍</span>
-          <p>Sonarpur, Kolkata – 700150</p>
+    <header class="hero" id="top">
+      <nav class="top-nav">
+        <a class="brand" href="#top">AS</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#journey">Journey</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
         </div>
-        <div class="contact-card">
-          <span>📞</span>
-          <p>7872069418 / 9749648511</p>
-        </div>
-        <div class="contact-card">
-          <span>✉️</span>
-          <p><a href="mailto:sarkaranwesha185@gmail.com">sarkaranwesha185@gmail.com</a></p>
-        </div>
+      </nav>
+
+      <div class="hero-grid">
+        <section class="hero-copy reveal">
+          <p class="eyebrow">Teacher Portfolio</p>
+          <h1>Anwesha Sarkar</h1>
+          <p class="hero-role">I create <span id="dynamic-role">confident learners</span> through abacus training, playful maths instruction, and structured primary teaching.</p>
+          <p class="hero-summary">
+            Motivated and enthusiastic educator with 2+ years of teaching experience, focused on helping children think faster,
+            enjoy learning, and build strong academic habits.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#contact">Book a Class</a>
+            <a class="secondary-btn" href="#journey">View Experience</a>
+          </div>
+          <div class="hero-badges">
+            <span>Abacus & Mental Arithmetic</span>
+            <span>Primary Teaching</span>
+            <span>Interactive Learning</span>
+          </div>
+        </section>
+
+        <aside class="hero-panel reveal reveal-delay">
+          <div class="profile-orb">
+            <div class="profile-pic"><span>AS</span></div>
+          </div>
+          <div class="spotlight-card glass-card floating-card">
+            <p class="card-label">Currently Focused On</p>
+            <h2 id="focus-text">Speed, confidence, and joyful maths practice.</h2>
+          </div>
+          <div class="mini-stats">
+            <div class="glass-card stat-chip">
+              <strong class="counter" data-target="120">0</strong>
+              <span>Students guided</span>
+            </div>
+            <div class="glass-card stat-chip">
+              <strong class="counter" data-target="300">0</strong>
+              <span>Interactive sessions</span>
+            </div>
+            <div class="glass-card stat-chip">
+              <strong class="counter" data-target="15">0</strong>
+              <span>Competition prep learners</span>
+            </div>
+          </div>
+        </aside>
       </div>
-      <form class="contact-form" autocomplete="off">
-        <h3>Send a Message</h3>
-        <div class="form-row">
-          <input type="text" name="name" placeholder="Your Name" required>
-        </div>
-        <div class="form-row">
-          <input type="email" name="email" placeholder="Your Email" required>
-        </div>
-        <div class="form-row">
-          <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-        </div>
-        <button type="submit">Send</button>
-        <div class="form-message" style="display:none;"></div>
-      </form>
-    </section>
-  </main>
+    </header>
 
-  <footer>
-    <p>© 2025 Anwesha Sarkar | Teacher Portfolio</p>
-  </footer>
+    <main>
+      <section id="about" class="content-card reveal">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2>A calm, student-first teaching style.</h2>
+        </div>
+        <div class="about-grid">
+          <p class="lead-copy">
+            I blend structure with encouragement so children stay engaged while building core skills. My classes focus on mental agility,
+            concept clarity, and creating a positive learning environment where every student feels supported.
+          </p>
+          <div class="value-grid">
+            <article class="glass-card value-card">
+              <h3>Concept Clarity</h3>
+              <p>Breaking down topics into simple, memorable steps that make learning easier to retain.</p>
+            </article>
+            <article class="glass-card value-card">
+              <h3>Confidence Building</h3>
+              <p>Using encouragement, repetition, and practice to help children trust their own thinking.</p>
+            </article>
+            <article class="glass-card value-card">
+              <h3>Interactive Sessions</h3>
+              <p>Balancing drills, examples, and activities so lessons stay lively and focused.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="journey" class="content-card reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Journey</p>
+          <h2>Experience shaped by hands-on teaching.</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item glass-card">
+            <span class="timeline-year">2024 – 2025</span>
+            <h3>Abacus Trainer · Educus Mind Development House</h3>
+            <p>Conducted abacus and mental arithmetic classes for children aged 2–15, prepared lesson flows, and guided students for competitions.</p>
+          </article>
+          <article class="timeline-item glass-card">
+            <span class="timeline-year">2022 – 2024</span>
+            <h3>Private Tutor · Freelance</h3>
+            <p>Taught Mathematics, English, and Environmental Studies to Classes 1–5 with an interactive and student-friendly approach.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="content-card reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Skills</p>
+          <h2>Built for patient, high-energy learning experiences.</h2>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-block glass-card">
+            <div class="skill-meta">
+              <h3>Abacus & Mental Arithmetic</h3>
+              <span>95%</span>
+            </div>
+            <div class="skill-bar"><span data-width="95%"></span></div>
+          </article>
+          <article class="skill-block glass-card">
+            <div class="skill-meta">
+              <h3>Primary School Teaching</h3>
+              <span>92%</span>
+            </div>
+            <div class="skill-bar"><span data-width="92%"></span></div>
+          </article>
+          <article class="skill-block glass-card">
+            <div class="skill-meta">
+              <h3>Lesson Planning</h3>
+              <span>88%</span>
+            </div>
+            <div class="skill-bar"><span data-width="88%"></span></div>
+          </article>
+          <article class="skill-block glass-card">
+            <div class="skill-meta">
+              <h3>Classroom Management</h3>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar"><span data-width="90%"></span></div>
+          </article>
+          <article class="skill-block glass-card">
+            <div class="skill-meta">
+              <h3>Parent & Student Communication</h3>
+              <span>93%</span>
+            </div>
+            <div class="skill-bar"><span data-width="93%"></span></div>
+          </article>
+          <article class="skill-block glass-card">
+            <div class="skill-meta">
+              <h3>Patience & Adaptability</h3>
+              <span>96%</span>
+            </div>
+            <div class="skill-bar"><span data-width="96%"></span></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="education" class="content-card reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Education</p>
+          <h2>Academic background and ongoing growth.</h2>
+        </div>
+        <div class="education-grid">
+          <article class="glass-card edu-card">
+            <span class="edu-year">Pursuing</span>
+            <h3>B.A. LL.B.</h3>
+            <p>Jyotirmoy School of Law, University of Calcutta.</p>
+          </article>
+          <article class="glass-card edu-card">
+            <span class="edu-year">2021</span>
+            <h3>Higher Secondary</h3>
+            <p>Bethuadahari Girls’ High School · 78%.</p>
+          </article>
+          <article class="glass-card edu-card">
+            <span class="edu-year">2019</span>
+            <h3>Madhyamik</h3>
+            <p>Bethuadahari Girls’ High School · 68%.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="content-card reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s create a joyful learning journey.</h2>
+        </div>
+        <div class="contact-layout">
+          <div class="contact-panel glass-card">
+            <p class="availability" id="availability-status">Checking class availability...</p>
+            <div class="contact-list">
+              <p><strong>Location</strong><span>Sonarpur, Kolkata – 700150</span></p>
+              <p><strong>Phone</strong><span>7872069418 / 9749648511</span></p>
+              <p><strong>Email</strong><span><a href="mailto:sarkaranwesha185@gmail.com">sarkaranwesha185@gmail.com</a></span></p>
+            </div>
+          </div>
+
+          <form class="contact-form glass-card" autocomplete="off">
+            <h3>Send a Message</h3>
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-row">
+              <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-row">
+              <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+            <div class="form-message" hidden></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer reveal">
+      <p>© <span id="footer-year"></span> Anwesha Sarkar · Teacher Portfolio</p>
+    </footer>
+  </div>
+
   <script>
-    // Fade-in animation on scroll
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = {
-      threshold: 0.2,
-      rootMargin: "0px 0px -50px 0px"
-    };
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('appear');
-        observer.unobserve(entry.target);
+    document.addEventListener('DOMContentLoaded', () => {
+      const revealItems = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.18 });
+      revealItems.forEach((item) => revealObserver.observe(item));
+
+      document.querySelectorAll('.top-nav a[href^="#"]').forEach((link) => {
+        link.addEventListener('click', (event) => {
+          const target = document.querySelector(link.getAttribute('href'));
+          if (!target) return;
+          event.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
       });
-    }, appearOptions);
 
-    faders.forEach(fader => {
-      appearOnScroll.observe(fader);
-    });
+      const progressBar = document.getElementById('scroll-progress');
+      const updateScrollProgress = () => {
+        const scrollTop = window.scrollY;
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+        progressBar.style.width = `${progress}%`;
+      };
+      updateScrollProgress();
+      window.addEventListener('scroll', updateScrollProgress, { passive: true });
 
-    // Contact form fake submission
-    document.querySelector('.contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const msg = this.querySelector('.form-message');
-      msg.textContent = "Thank you for your message! (Demo only)";
-      msg.style.display = "block";
-      this.reset();
-      setTimeout(() => { msg.style.display = "none"; }, 4000);
+      const roleWords = ['confident learners', 'faster thinkers', 'happy classrooms'];
+      const focusLines = [
+        'Speed, confidence, and joyful maths practice.',
+        'Playful learning with strong concept clarity.',
+        'Guided routines that make children feel capable.'
+      ];
+      const roleElement = document.getElementById('dynamic-role');
+      const focusElement = document.getElementById('focus-text');
+      let activeIndex = 0;
+      setInterval(() => {
+        activeIndex = (activeIndex + 1) % roleWords.length;
+        roleElement.classList.add('swap-out');
+        focusElement.classList.add('swap-out');
+        setTimeout(() => {
+          roleElement.textContent = roleWords[activeIndex];
+          focusElement.textContent = focusLines[activeIndex];
+          roleElement.classList.remove('swap-out');
+          focusElement.classList.remove('swap-out');
+        }, 260);
+      }, 2800);
+
+      const counters = document.querySelectorAll('.counter');
+      let countersStarted = false;
+      const startCounters = () => {
+        if (countersStarted) return;
+        countersStarted = true;
+        counters.forEach((counter) => {
+          const target = Number(counter.dataset.target);
+          let current = 0;
+          const increment = Math.max(1, Math.ceil(target / 40));
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              counter.textContent = `${target}+`;
+              clearInterval(timer);
+            } else {
+              counter.textContent = `${current}+`;
+            }
+          }, 35);
+        });
+      };
+      const heroPanel = document.querySelector('.hero-panel');
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) startCounters();
+        });
+      }, { threshold: 0.35 });
+      if (heroPanel) counterObserver.observe(heroPanel);
+
+      const skillBars = document.querySelectorAll('.skill-bar span');
+      const skillObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.style.width = entry.target.dataset.width;
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.45 });
+      skillBars.forEach((bar) => skillObserver.observe(bar));
+
+      const availabilityElement = document.getElementById('availability-status');
+      const currentHour = new Date().getHours();
+      availabilityElement.textContent = currentHour >= 9 && currentHour <= 20
+        ? '🟢 Usually available for classes during this time.'
+        : '🕒 Usually replies within 12 hours.';
+
+      const form = document.querySelector('.contact-form');
+      const formMessage = form.querySelector('.form-message');
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        formMessage.textContent = 'Thank you for your message! This demo form is ready for future integration.';
+        formMessage.hidden = false;
+        form.reset();
+      });
+
+      document.getElementById('footer-year').textContent = new Date().getFullYear();
     });
   </script>
 </body>
